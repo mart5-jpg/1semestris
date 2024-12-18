@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(fons.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.santa {
+    width: 300px;
+    animation-name: movingSanta;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    position: relative;
+    left: -60vw;
+}
+
+@keyframes movingSanta {
+    0% {
+        width: 300px;
+    }
+    10%, 50%, 70%, 90% {
+        transform: rotate(10deg);
+    }
+    30% {
+        transform: rotate(360deg);
+    }
+    20%, 40%, 60%, 80% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        left: 100%
+    }
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: snow;
+}
